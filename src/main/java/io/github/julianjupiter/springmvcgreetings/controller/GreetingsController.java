@@ -10,18 +10,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-public class HomeController extends BaseController {
+public class GreetingsController extends BaseController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(GreetingsController.class);
 
-    @RequestMapping(value = {"/", "/home"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/greetings"}, method = RequestMethod.GET)
     public String index(ModelMap model, HttpServletRequest request) {
-        LOGGER.info(request.getRequestURL().toString());
+        LOGGER.info("URL" + request.getRequestURL().toString());
 
-        model.addAttribute("pageTitle", "Home");
-        model.addAttribute("messageTitle", "Spring MVC Greetings Application");
-        model.addAttribute("messageBody", "Welcome to Spring MVC Greetings Application!");
+        model.addAttribute("pageTitle", "Greetings");
+        model.addAttribute("messageTitle", "Hello world!");
+        model.addAttribute("messageBody", "Hello world! Welcome to Spring MVC!");
 
-        return "home/index";
+        return "greetings/index";
     }
+
 }
