@@ -1,18 +1,17 @@
-package io.github.julianjupiter.springmvcgreetings.configuration;
+package com.julianjupiter.springmvcgreetings.configuration;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
-import org.springframework.web.servlet.view.InternalResourceViewResolver;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.JstlView;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "io.github.julianjupiter.springmvcgreetings")
-public class ApplicationWebConfiguration extends WebMvcConfigurerAdapter {
+@ComponentScan(basePackages = "com.julianjupiter.springmvcgreetings")
+public class ApplicationWebConfiguration implements WebMvcConfigurer {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
@@ -22,11 +21,8 @@ public class ApplicationWebConfiguration extends WebMvcConfigurerAdapter {
 
     @Override
     public void configureViewResolvers(ViewResolverRegistry registry) {
-        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-        viewResolver.setViewClass(JstlView.class);
-        viewResolver.setPrefix("/WEB-INF/views/");
-        viewResolver.setSuffix(".jsp");
-        registry.viewResolver(viewResolver);
+        registry.jsp("/WEB-INF/views/", ".jsp")
+                .viewClass(JstlView.class);
     }
 
 }

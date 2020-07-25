@@ -1,8 +1,10 @@
-        <footer class="footer">
+            </div>
+        </main>
+        <footer class="footer position-absolute mt-auto py-3">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-12">
-                        <p class="text-muted">&copy; <a href="<c:url value='http://julianjupiter.github.io' />">2015 Julian Jupiter</a></p>
+                    <div class="col">
+                        <p class="text-muted text-center">&copy; <a href="https://julianjupiter.com"><fmt:formatDate value="${date}" pattern="yyyy" /> Julian Jupiter</a></p>
                     </div>
                 </div>
             </div>
@@ -10,8 +12,8 @@
         <!-- Bootstrap core JavaScript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
-        <script src="<c:url value='/assets/js/jquery.min.js' />"></script>
+        <script src="<c:url value='/assets/js/jquery-3.5.1.slim.min.js' />"></script>
+        <script src="<c:url value='/assets/js/popper.min.js' />"></script>
         <script src="<c:url value='/assets/js/bootstrap.min.js' />"></script>
-        <script src="<c:url value='/assets/js/ie10-viewport-bug-workaround.js' />"></script>
     </body>
 </html>

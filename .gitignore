@@ -1,4 +1,8 @@
 .classpath
 .project
 .settings/
-/target/
+target/
+tomcat.8080/
+
+.idea/
+*.iml

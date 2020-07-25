@@ -1,22 +1,21 @@
-package io.github.julianjupiter.springmvcgreetings.controller;
+package com.julianjupiter.springmvcgreetings.controller;
 
-import javax.servlet.http.HttpServletRequest;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-@Controller
-public class HomeController extends BaseController {
+import javax.servlet.http.HttpServletRequest;
+import java.lang.System.Logger;
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(GreetingsController.class);
+@Controller
+public class HomeController {
+
+    private static final Logger LOGGER = System.getLogger(GreetingsController.class.getName());
 
     @RequestMapping(value = {"/", "/home"}, method = RequestMethod.GET)
-    public String index(ModelMap model, HttpServletRequest request) {
-        LOGGER.info("URL" + request.getRequestURL().toString());
+    public String index(HttpServletRequest request, Model model) {
+        LOGGER.log(Logger.Level.INFO, "URL: " + request.getRequestURL().toString());
 
         model.addAttribute("pageTitle", "Home");
         model.addAttribute("messageTitle", "Spring MVC Greetings Application");

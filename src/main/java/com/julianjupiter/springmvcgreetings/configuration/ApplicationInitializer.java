@@ -1,4 +1,4 @@
-package io.github.julianjupiter.springmvcgreetings.configuration;
+package com.julianjupiter.springmvcgreetings.configuration;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 

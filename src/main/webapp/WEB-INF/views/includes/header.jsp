@@ -1,21 +1,18 @@
-        <!-- Fixed navbar -->
-        <nav class="navbar navbar-inverse navbar-fixed-top">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+          <a class="navbar-brand" href="${pageContext.request.contextPath}/">Spring MVC Greetings Application</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+              <li class="${pageTitle == 'Home' ? 'nav-item active': 'nav-item'}">
+                <a class="nav-link" href="${pageContext.request.contextPath}/">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="${pageTitle == 'Greetings' ? 'nav-item active': 'nav-item'}">
+                <a class="nav-link" href="${pageContext.request.contextPath}/greetings">Greetings</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <main role="main" class="flex-shrink-0">
             <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span> 
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="<c:url value='/' />">Spring MVC Greetings App</a>
-                </div>
-                <div id="navbar" class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li<c:if test="${pageTitle == 'Home'}"> class="active"</c:if>><a href="<c:url value='/' />">Home</a></li>
-                        <li<c:if test="${pageTitle == 'Greetings'}"> class="active"</c:if>><a href="<c:url value='/greetings' />">Greetings</a></li>
-                    </ul>
-                </div>
-                <!--/.nav-collapse -->
-            </div>
-        </nav> <!-- /navbar -->
