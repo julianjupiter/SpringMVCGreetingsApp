@@ -12,8 +12,8 @@
         <!-- Bootstrap core JavaScript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
-        <script src="<c:url value='/assets/js/jquery-3.5.1.slim.min.js' />"></script>
-        <script src="<c:url value='/assets/js/popper.min.js' />"></script>
-        <script src="<c:url value='/assets/js/bootstrap.min.js' />"></script>
+        <script src="${pageContext.request.contextPath}/assets/js/jquery-3.5.1.slim.min.js"></script>
+        <script src="${pageContext.request.contextPath}/assets/js/popper.min.js"></script>
+        <script src="${pageContext.request.contextPath}/assets/js/bootstrap.min.js"></script>
     </body>
 </html>
