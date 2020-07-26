@@ -12,8 +12,8 @@ Open your browser: http://localhost:8080/
 
 # Screenshots
 ## Home
-![alt text](simple-spring-mvc-application-with-java-configuration-01.JPG "Home")
+![alt text](screenshots/simple-spring-mvc-application-with-java-configuration-01.JPG "Home")
 ## Greetings
-![alt text](simple-spring-mvc-application-with-java-configuration-02.JPG "List of Books")
+![alt text](screenshots/simple-spring-mvc-application-with-java-configuration-02.JPG "List of Books")
 ## View Greetings
-![alt text](simple-spring-mvc-application-with-java-configuration-03.JPG "View a Book")
+![alt text](screenshots/simple-spring-mvc-application-with-java-configuration-03.JPG "View a Book")
