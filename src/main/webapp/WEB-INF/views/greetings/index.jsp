@@ -1,4 +1,3 @@
-
 <%@ include file="../includes/head.jsp" %>
 <%@ include file="../includes/header.jsp" %>
     <div class="jumbotron">
